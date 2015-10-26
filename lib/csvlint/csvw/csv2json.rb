@@ -232,6 +232,7 @@ module Csvlint
         end
 
         def Csv2Json.value_to_json(value, base_type)
+          return value[:invalid] if value.is_a? Hash and value[:invalid]
           if value.is_a? Float
             if value.nan?
               return "NaN"
