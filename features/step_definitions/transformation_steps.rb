@@ -52,7 +52,7 @@ When(/^I transform the CSV into JSON( in minimal mode)?$/) do |minimal|
       end
     end
 
-    transformer = Csvlint::Csvw::Csv2Json.new( @url, @csv_options, @schema, { :minimal => minimal } )
+    transformer = Csvlint::Csvw::Csv2Json::Csv2Json.new( @url, @csv_options, @schema, { :minimal => minimal } )
     @json = transformer.result
     @errors = transformer.errors
     @warnings = transformer.warnings

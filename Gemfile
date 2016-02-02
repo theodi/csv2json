@@ -3,7 +3,9 @@
 
 source 'https://rubygems.org'
 
-gem 'csvlint', :git => 'https://github.com/theodi/csvlint.rb.git', :branch => 'feature-csvw-transformation'
+# gem 'csvlint', :path => '../csvlint.rb'
 
-# Specify your gem's dependencies in csvlint.rb.gemspec
+gem 'csvlint', :git => 'https://github.com/theodi/csvlint.rb.git'
+
+# Specify your gem's dependencies in csv2json.gemspec
 gemspec

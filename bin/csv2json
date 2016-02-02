@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+$:.unshift File.join( File.dirname(__FILE__), "..", "lib")
+
+require 'csvlint/csvw/csv2json/cli'
+
+if ARGV == ["help"]
+  Csvlint::Csvw::Csv2Json::Cli.start(["help"])
+else
+  Csvlint::Csvw::Csv2Json::Cli.start(ARGV.unshift("transform"))
+end
